@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YourWay Real Estate Coaching | Property Management, Investing, Flipping & Agent Coaching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="High-energy real estate coaching for property managers, flippers, investors, and agents who want more doors, better deals, and fewer excuses." />
+  <style>
+    :root {
+      --primary: #f59e0b;
+      --primary-soft: #fbbf24;
+      --bg: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card-bg: #020617;
+      --light-bg: #f5f7fb;
+      --dark: #020617;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b1120;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(2, 6, 23, 0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 500;
+      font-size: 0.78rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-soft);
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(248, 250, 252, 0.14) 0, transparent 40%),
+        radial-gradient(circle at top right, rgba(249, 115, 22, 0.18) 0, transparent 55%),
+        #020617;
+      padding: 3.5rem 0 3rem;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.72rem;
+      color: var(--primary-soft);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      line-height: 1.1;
+      margin-bottom: 0.7rem;
+      color: #f9fafb;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-main p {
+      font-size: 0.98rem;
+      color: #e5e7eb;
+      margin-bottom: 1.25rem;
+      max-width: 37rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      border-radius: 999px;
+      padding: 0.28rem 0.7rem;
+      border: 1px solid rgba(156, 163, 175, 0.9);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f97316, #f59e0b);
+      color: #111827;
+      box-shadow: 0 10px 28px rgba(249, 115, 22, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(249, 115, 22, 0.6);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(249, 250, 251, 0.45);
+      background: transparent;
+      color: #e5e7eb;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-soft);
+      color: var(--primary-soft);
+    }
+
+    .btn span {
+      margin-left: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-metrics {
+      margin-top: 1.1rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+      font-size: 0.78rem;
+    }
+
+    .metric-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+      font-weight: 500;
+    }
+
+    .metric-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f9fafb;
+    }
+
+    .metric-sub {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.96));
+      padding: 1.5rem 1.4rem;
+      border-radius: 1.15rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-card h3 {
+      font-size: 1rem;
+      color: #f9fafb;
+      margin-bottom: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 600;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-card li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+
+    .hero-card li::before {
+      content: "▹";
+      color: var(--primary-soft);
+      margin-top: 0.05rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      border-top: 1px solid rgba(55, 65, 81, 0.9);
+      padding-top: 0.7rem;
+    }
+
+    .hero-avatar {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .hero-avatar-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-avatar-text {
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .hero-avatar-text span {
+      display: block;
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    /* BY THE NUMBERS */
+
+    .numbers {
+      background: #020617;
+      padding: 1.75rem 0 1.9rem;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+    }
+
+    .numbers-inner {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .numbers-item {
+      border-right: 1px solid rgba(30, 64, 175, 0.7);
+      padding-right: 1.2rem;
+    }
+
+    .numbers-item:last-child {
+      border-right: none;
+    }
+
+    .numbers-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-soft);
+      margin-bottom: 0.15rem;
+    }
+
+    .numbers-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #9ca3af;
+      margin-bottom: 0.1rem;
+    }
+
+    .numbers-sub {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* MAIN SECTIONS */
+
+    main {
+      background: radial-gradient(circle at top, #020617 0, #020617 30%, #020617 50%, #020617 70%, #020617 100%);
+    }
+
+    section {
+      padding: 2.75rem 0;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      color: #f9fafb;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      max-width: 36rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.98));
+      border-radius: 1rem;
+      padding: 1.4rem 1.35rem 1.5rem;
+      border: 1px solid rgba(31, 41, 55, 0.9);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .card-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--primary-soft);
+      margin-bottom: 0.2rem;
+    }
+
+    .card-tagline {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      color: #e5e7eb;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      color: #f9fafb;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 0.7rem;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #e5e7eb;
+      font-size: 0.94rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .benefits {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.9rem;
+      font-size: 0.88rem;
+      color: #9ca3af;
+    }
+
+    .benefits li {
+      margin-bottom: 0.35rem;
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .benefits li::before {
+      content: "✔";
+      color: var(--primary-soft);
+      margin-top: 0.05rem;
+      font-size: 0.78rem;
+    }
+
+    .card-footer-note {
+      font-size: 0.78rem;
+      color: #6b7280;
+      margin-bottom: 0.7rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .pill-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .pill-list li {
+      font-size: 0.82rem;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+      font-size: 0.9rem;
+    }
+
+    .panel {
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.15rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.97));
+    }
+
+    .panel h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+      margin-bottom: 0.4rem;
+    }
+
+    .panel.bad h3 {
+      color: #f97373;
+    }
+
+    .panel.good h3 {
+      color: var(--primary-soft);
+    }
+
+    .panel ul {
+      list-style: none;
+      color: #9ca3af;
+    }
+
+    .panel ul li {
+      margin-bottom: 0.35rem;
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .panel.bad ul li::before {
+      content: "✖";
+      color: #f97373;
+      font-size: 0.78rem;
+      margin-top: 0.05rem;
+    }
+
+    .panel.good ul li::before {
+      content: "✔";
+      color: var(--primary-soft);
+      font-size: 0.78rem;
+      margin-top: 0.05rem;
+    }
+
+    /* FAQ & FORM */
+
+    .faq-item {
+      margin-bottom: 1.1rem;
+    }
+
+    .faq-item h3 {
+      font-size: 0.98rem;
+      color: #e5e7eb;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .lead-form {
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98));
+      border-radius: 1.1rem;
+      padding: 1.6rem 1.4rem 1.5rem;
+      border: 1px solid rgba(55, 65, 81, 0.95);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.95);
+    }
+
+    .lead-form h3 {
+      font-size: 1.05rem;
+      color: #f9fafb;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.5rem;
+    }
+
+    .lead-form p {
+      font-size: 0.86rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+
+    .lead-form label {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      display: block;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      border-radius: 0.55rem;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 0.88rem;
+      margin-bottom: 0.8rem;
+      font-family: inherit;
+    }
+
+    .lead-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .lead-form input:focus,
+    .lead-form select:focus,
+    .lead-form textarea:focus {
+      outline: none;
+      border-color: var(--primary-soft);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.75);
+    }
+
+    .final-cta {
+      background: radial-gradient(circle at top, rgba(249, 115, 22, 0.14), rgba(15, 23, 42, 1));
+      border-top: 1px solid rgba(55, 65, 81, 1);
+      border-bottom: 1px solid rgba(31, 41, 55, 1);
+    }
+
+    .final-cta-inner {
+      text-align: center;
+    }
+
+    .final-cta-title {
+      font-size: 1.6rem;
+      color: #f9fafb;
+      margin-bottom: 0.5rem;
+    }
+
+    .final-cta-text {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      margin-bottom: 1.2rem;
+    }
+
+    footer {
+      padding: 1.75rem 0;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+      border-top: 1px solid rgba(31, 41, 55, 1);
+      background: #020617;
+    }
+
+    footer p + p {
+      margin-top: 0.2rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .two-col,
+      .numbers-inner,
+      .grid-3,
+      .compare-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .numbers-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(30, 64, 175, 0.7);
+        padding-bottom: 0.9rem;
+        margin-bottom: 0.6rem;
+      }
+      .numbers-item:last-child {
+        border-bottom: none;
+      }
+      .hero {
+        padding-top: 2.6rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-subtitle {
+        font-size: 0.98rem;
+      }
+      .hero-metrics {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">
+      YOURWAY <span>COACHING</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#programs">Programs</a>
+      <a href="#who">Who It’s For</a>
+      <a href="#faq">FAQ</a>
+      <a href="#apply">Apply</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-main">
+        <p class="eyebrow">Real estate coaching for operators, not spectators</p>
+        <h1 class="hero-title">Build a real estate business that prints confidence and cash flow.</h1>
+        <p class="hero-subtitle">
+          Coaching for property managers, investors, flippers & agents who want more doors, more deals, and fewer excuses.
+        </p>
+        <p>
+          I’ve spent years in the middle of the mess: tenants, owners, contractors, collections, clogged toilets,
+          blown budgets, and deals that almost died three times. Coaching is where we strip out the chaos, build
+          simple systems, and get you back to running a business instead of the business running you.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">Built from real PM, flipping & investing experience</span>
+          <span class="badge">No fluff, just what actually works</span>
+          <span class="badge">Blunt feedback, clear next steps</span>
+        </div>
+
+        <div class="buttons">
+          <a href="#apply" class="btn btn-primary">Apply for Coaching <span>→</span></a>
+          <a href="#programs" class="btn btn-outline">View Programs <span>↓</span></a>
+        </div>
+
+        <div class="hero-metrics">
+          <div>
+            <div class="metric-label">Doors & Deals</div>
+            <div class="metric-value">Thousands+</div>
+            <div class="metric-sub">Real units and real problems solved over decades.</div>
+          </div>
+          <div>
+            <div class="metric-label">Flips & rehabs</div>
+            <div class="metric-value">2,000–3,000+</div>
+            <div class="metric-sub">Full-scale turnarounds, not just lipstick on a listing.</div>
+          </div>
+          <div>
+            <div class="metric-label">Years in the game</div>
+            <div class="metric-value">30+ years</div>
+            <div class="metric-sub">Rochester & Upstate NY real estate trenches.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>What we work on together</h3>
+        <ul>
+          <li>Turn random chaos into a simple set of repeatable systems.</li>
+          <li>Clean up leads, leasing, maintenance, collections & flips.</li>
+          <li>Decide what to automate, delegate, or delete completely.</li>
+          <li>Build a weekly rhythm so the business stops hijacking your life.</li>
+        </ul>
+        <p class="hero-note">
+          30 years. 2,000–3,000 flips, rehabs, and full-scale turnarounds.
+          I know exactly what kills profit and what prints it.
+        </p>
+        <div class="hero-avatar">
+          <img src="sean-dapper.png" alt="Sean, YourWay real estate coach" class="hero-avatar-img" />
+          <div class="hero-avatar-text">
+            <span>YourWay Coaching</span>
+            Property manager, investor, flipper & operator in the Rochester market.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section class="numbers">
+    <div class="container numbers-inner">
+      <div class="numbers-item">
+        <div class="numbers-value">Thousands+</div>
+        <div class="numbers-label">Units managed / overseen</div>
+        <div class="numbers-sub">Real doors, real people, real problems solved.</div>
+      </div>
+      <div class="numbers-item">
+        <div class="numbers-value">Thousands+</div>
+        <div class="numbers-label">Leases & renewals</div>
+        <div class="numbers-sub">From “no systems” to predictable processes.</div>
+      </div>
+      <div class="numbers-item">
+        <div class="numbers-value">2,000–3,000+</div>
+        <div class="numbers-label">Flips & rehabs involved</div>
+        <div class="numbers-sub">Projects, turns and full-scale renovations.</div>
+      </div>
+      <div class="numbers-item">
+        <div class="numbers-value">$100M+</div>
+        <div class="numbers-label">Property value touched</div>
+        <div class="numbers-sub">Management, deals, and real equity at stake.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs">
+    <div class="container">
+      <h2 class="section-title">Four coaching tracks. One goal: a business that actually works.</h2>
+      <p class="section-subtitle">
+        Choose the lane that matches how you make your money. Every track is 1:1, practical, and built around
+        your market, your numbers, and your actual constraints.
+      </p>
+
+      <div class="grid-3">
+        <!-- Agent coaching -->
+        <div class="card">
+          <div class="card-label">For licensed agents</div>
+          <span class="card-tagline">Most popular</span>
+          <h3>Real Estate Agent Coaching</h3>
+          <p>
+            For agents who are tired of guessing where the next deal comes from and ready to build a real pipeline,
+            not just chase random leads.
+          </p>
+          <p class="price">From $497 / month · 1:1 coaching</p>
+          <ul class="benefits">
+            <li>Build a simple, repeatable listing & buyer system.</li>
+            <li>Turn your market knowledge into actual appointments.</li>
+            <li>Plug the holes where money & time leak out of your week.</li>
+          </ul>
+          <p class="card-footer-note">
+            Best if you’re already in the game and want more consistent deals.
+          </p>
+          <a href="/coaching-real-estate.html" class="btn btn-outline">Agent coaching details</a>
+        </div>
+
+        <!-- PM coaching -->
+        <div class="card">
+          <div class="card-label">For PM owners & operators</div>
+          <span class="card-tagline">Best for scaling</span>
+          <h3>Property Management Coaching</h3>
+          <p>
+            For property managers and small operators buried in fires who want doors, owners, and tenants handled
+            with clean systems instead of chaos.
+          </p>
+          <p class="price">From $497 / month · 1:1 coaching</p>
+          <ul class="benefits">
+            <li>Owner onboarding & expectations that stop the micromanaging.</li>
+            <li>Maintenance, collections & communication that run on rails.</li>
+            <li>Use your software & VAs like actual leverage, not duct tape.</li>
+          </ul>
+          <p class="card-footer-note">
+            Best if you have 10–150 doors and want to grow without losing your mind.
+          </p>
+          <a href="/coaching-property-management.html" class="btn btn-outline">PM coaching details</a>
+        </div>
+
+        <!-- Investor coaching -->
+        <div class="card">
+          <div class="card-label">For investors</div>
+          <span class="card-tagline">Portfolio builders</span>
+          <h3>Real Estate Investing Coaching</h3>
+          <p>
+            For investors who want to buy better deals, avoid obvious landmines, and build a portfolio that actually
+            cash flows instead of just looking good on paper.
+          </p>
+          <p class="price">From $497 / month · 1:1 coaching</p>
+          <ul class="benefits">
+            <li>Clarify your buy box and stop chasing junk.</li>
+            <li>Run numbers in a way that matches your reality, not theory.</li>
+            <li>Get practical help on operations, not just acquisitions.</li>
+          </ul>
+          <p class="card-footer-note">
+            Best if you already own or are actively trying to buy property.
+          </p>
+          <a href="/coaching-investing.html" class="btn btn-outline">Investor coaching details</a>
+        </div>
+
+        <!-- Flip coaching -->
+        <div class="card">
+          <div class="card-label">For flippers & rehabbers</div>
+          <span class="card-tagline">Project-driven</span>
+          <h3>Flip & Rehab Coaching</h3>
+          <p>
+            For flippers, BRRRR investors, and rehab-heavy operators who want predictable, profitable projects
+            instead of blown budgets and surprise delays.
+          </p>
+          <p class="price">From $497 / month · 1:1 coaching</p>
+          <ul class="benefits">
+            <li>Break down deals, scope, budgets & timelines before you swing a hammer.</li>
+            <li>Avoid the classic profit-killers: change orders, scope creep, and weak oversight.</li>
+            <li>Structure contractors, subs, and partners so everyone knows the rules going in.</li>
+            <li>Use your flips to build long-term wealth, not just one-and-done checks.</li>
+          </ul>
+          <p class="card-footer-note">
+            30 years. 2,000–3,000 flips, rehabs & turnarounds. We focus on what keeps your profit alive.
+          </p>
+          <a href="/coaching-flipping.html" class="btn btn-outline">Flip coaching details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR / NOT FOR -->
+  <section id="who">
+    <div class="container two-col">
+      <div>
+        <h2 class="section-title">Who this coaching is actually for.</h2>
+        <p class="section-subtitle">
+          This isn’t a motivation seminar. It’s for people who want to be in the arena or are already there and want
+          their operation cleaner, stronger, and more profitable — whether you’re just starting out or leveling up.
+        </p>
+
+        <ul class="pill-list">
+          <li>Property managers with 10–150 doors</li>
+          <li>Agents with real, active clients</li>
+          <li>Hands-on investors & flippers</li>
+          <li>People willing to implement between calls</li>
+        </ul>
+
+        <p>
+          You don’t need another “mindset hack.” You need clear priorities, a small number of systems that actually
+          run, and someone who will call you out when you’re avoiding the real work.
+        </p>
+        <p>
+          Every call is focused on decisions, implementation, and accountability. Less theory. More “here’s what you
+          do this week.”
+        </p>
+      </div>
+
+      <div class="compare-grid">
+        <div class="panel bad">
+          <h3>Not for you if…</h3>
+          <ul>
+            <li>You’re hoping for a magic funnel that fixes everything while you coast.</li>
+            <li>You won’t touch a phone, email, or conversation with owners, tenants, buyers or contractors.</li>
+            <li>You want motivation more than you want responsibility and execution.</li>
+            <li>You collect courses but rarely implement anything past week one.</li>
+          </ul>
+        </div>
+        <div class="panel good">
+          <h3>This is for you if…</h3>
+          <ul>
+            <li>You’re already doing deals, managing doors, or running a real estate business.</li>
+            <li>You’re willing to show the ugly parts: broken processes, bad leads, messy numbers, rough projects.</li>
+            <li>You want blunt, practical feedback more than you want to be told you’re “crushing it.”</li>
+            <li>You’re ready to trade chaos for systems, even if it means changing habits.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + APPLY -->
+  <section id="faq">
+    <div class="container two-col">
+      <div>
+        <h2 class="section-title">FAQ: before we get on a call.</h2>
+        <p class="section-subtitle">
+          Read this first so you know what you’re walking into and what you’re not.
+        </p>
+
+        <div class="faq-item">
+          <h3>How long is the commitment?</h3>
+          <p>
+            Most clients work in 3 month blocks. That’s enough time to build, test, and refine systems.
+            If you just want a single deep-dive strategy session, that’s possible too.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you work with beginners?</h3>
+          <p>
+            Yes. I work with beginners and experienced operators. If you’re brand new, you just need to be serious about
+            taking action: talking to people, looking at deals, running numbers, or getting your first project moving.
+            If you’re only “thinking about real estate someday,” this isn’t the best use of your money yet.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What happens on the calls?</h3>
+          <p>
+            We look at what’s actually happening in your business: leads, deals, doors, bottlenecks, projects,
+            numbers. Then we pick the highest-leverage problems and build simple, executable steps for the next
+            1–2 weeks.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is this just templates and theory?</h3>
+          <p>
+            You’ll get templates, scripts, checklists and frameworks, but they’re there to support decisions,
+            not replace them. The focus stays on building a business that works in your world, not just on paper.
+          </p>
+        </div>
+      </div>
+
+      <div id="apply" class="lead-form">
+        <h3>Coaching Application</h3>
+        <p>
+          Fill this out honestly. I’ll review it, and if I think I can help, you’ll get a link to book a call.
+          If it’s not a fit, I’ll tell you instead of wasting your time.
+        </p>
+
+        <!-- Simple mailto form for now; replace later with a proper endpoint if you want -->
+        <form action="mailto:Yourwaypm@yahoo.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="Name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="Email" type="email" required />
+
+          <label for="role">What best describes you?</label>
+          <select id="role" name="Role" required>
+            <option value="">Select one</option>
+            <option value="pm">Property manager / PM company owner</option>
+            <option value="agent">Real estate agent</option>
+            <option value="investor">Real estate investor</option>
+            <option value="flipper">Flipper / rehab-focused investor</option>
+            <option value="other">Other – but still in real estate</option>
+          </select>
+
+          <label for="market">What market(s) are you in?</label>
+          <input id="market" name="Market" type="text" placeholder="e.g. Rochester NY, Monroe County, etc." />
+
+          <label for="current-situation">Where are you right now?</label>
+          <textarea id="current-situation" name="Current situation" placeholder="Doors, deals, projects, revenue, or whatever feels most honest." required></textarea>
+
+          <label for="biggest-issue">What’s the biggest problem you want help with?</label>
+          <textarea id="biggest-issue" name="Biggest issue" required></textarea>
+
+          <label for="timeline">What’s your ideal timeline for change?</label>
+          <select id="timeline" name="Timeline">
+            <option value="">Select one</option>
+            <option value="30">Next 30 days</option>
+            <option value="90">Next 90 days</option>
+            <option value="180">Next 6 months</option>
+            <option value="long">Longer term / strategic</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.3rem;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container final-cta-inner">
+      <h2 class="final-cta-title">Ready to stop running a daycare and start running a business?</h2>
+      <p class="final-cta-text">
+        If you’re serious about cleaning up your systems, tightening your numbers, and getting your time back,
+        coaching is where we do it on purpose instead of by accident.
+      </p>
+      <a href="#apply" class="btn btn-primary">Apply for Coaching</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> YourWay Real Estate Coaching · Rochester Property Management Experts</p>
+    <p>Serving Rochester NY, Monroe County & surrounding markets.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
