@@ -1,18 +1,1047 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>YourWay Real Estate Coaching</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <title>YourWay Real Estate Coaching | Systems, Clarity & Real-World Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Coaching for property managers, real estate investors, and agents who want real systems, real clarity, and real results from someone actually in the field."
+  />
+
+  <!-- Basic SEO -->
+  <meta name="keywords" content="real estate coaching, property management coaching, investor coaching, Rochester real estate" />
+  <meta name="author" content="YourWay Real Estate Coaching" />
+
+  <style>
+    /* RESET */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #060b10;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* LAYOUT */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(6, 11, 16, 0.96);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.92rem;
+    }
+
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: radial-gradient(circle at 20% 0%, #2dd4bf, #0f766e 45%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      opacity: 0.8;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .btn-nav {
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #22c55e;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .btn-nav:hover {
+      background: #22c55e;
+      color: #020617;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3.5rem 1.25rem;
+    }
+
+    @media (min-width: 900px) {
+      section {
+        padding: 4.5rem 1.25rem;
+      }
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+      }
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a3e635;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      line-height: 1.15;
+      margin-bottom: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #e5e7eb;
+      max-width: 30rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.8rem;
+      color: #cbd5f5;
+      margin-bottom: 1.1rem;
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-pill span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #020617;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 999px;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: none;
+      cursor: pointer;
+      color: #020617;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: transparent;
+      color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-footnote {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .hero-grid {
+      background: radial-gradient(circle at top left, #22c55e 0%, rgba(34, 197, 94, 0.08) 30%, transparent 60%),
+                  radial-gradient(circle at bottom right, #38bdf8 0%, rgba(56, 189, 248, 0.06) 24%, transparent 60%);
+      border-radius: 24px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      margin-bottom: 1.1rem;
+      background: #020617;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-tagline {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-mini {
+      font-size: 0.8rem;
+      color: #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .metric-label {
+      color: #9ca3af;
+      font-size: 0.75rem;
+    }
+
+    .metric-value {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* COACHING TRACKS */
+
+    .section-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #a3e635;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+      max-width: 36rem;
+      margin-bottom: 2rem;
+    }
+
+    .tracks-grid {
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    @media (min-width: 900px) {
+      .tracks-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .track-card {
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), transparent 50%),
+                  #020617;
+      padding: 1.4rem 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .track-card:nth-child(2) {
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 55%),
+                  #020617;
+    }
+
+    .track-card:nth-child(3) {
+      background: radial-gradient(circle at top right, rgba(244, 114, 182, 0.16), transparent 55%),
+                  #020617;
+    }
+
+    .track-name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .track-tagline {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .track-pill {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #a5b4fc;
+      margin-top: 0.25rem;
+    }
+
+    .track-list {
+      margin-top: 0.6rem;
+      list-style: none;
+      font-size: 0.85rem;
+      color: #d1d5db;
+    }
+
+    .track-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .track-bottom {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0.5rem;
+      margin-top: 1.1rem;
+    }
+
+    .price {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    .price span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .track-cta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.7);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* ABOUT / TRUST */
+
+    .about-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .about-grid {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      }
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #cbd5f5;
+    }
+
+    .about-body {
+      font-size: 0.92rem;
+      color: #e5e7eb;
+      margin-bottom: 1.1rem;
+    }
+
+    .about-body p + p {
+      margin-top: 0.7rem;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.7rem;
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 0.35rem 0.7rem;
+    }
+
+    .about-card {
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at top, rgba(34, 197, 94, 0.15), transparent 60%),
+                  #020617;
+      padding: 1.3rem 1.4rem;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .about-quote {
+      font-style: italic;
+      color: #e5e7eb;
+    }
+
+    .about-name {
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+
+    .about-meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    /* FAQ */
+
+    .faq-grid {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .faq-item {
+      border-radius: 14px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      padding: 0.9rem 1rem;
+      background: #020617;
+      cursor: pointer;
+    }
+
+    .faq-q {
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-a {
+      font-size: 0.85rem;
+      color: #d1d5db;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    .faq-toggle {
+      font-size: 1.2rem;
+      color: #9ca3af;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      }
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+    }
+
+    label {
+      color: #e5e7eb;
+    }
+
+    input, select, textarea {
+      background: #020617;
+      border-radius: 9px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      padding: 0.6rem 0.7rem;
+      color: #f9fafb;
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.5rem;
+    }
+
+    .contact-side {
+      font-size: 0.88rem;
+      color: #e5e7eb;
+    }
+
+    .contact-side p + p {
+      margin-top: 0.7rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 0.8rem;
+      font-size: 0.86rem;
+      color: #cbd5f5;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-list span {
+      color: #9ca3af;
+      font-size: 0.8rem;
+      margin-right: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1.4rem 1.25rem 1.8rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a {
+      opacity: 0.8;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-<header class="hero">
-  <div class="hero-content">
-    <h1>Build a Real Estate Business That Prints Confidence and Cash Flow</h1>
-    <p>Whether you’re new or experienced, we build the systems that make real estate predictable, not chaotic.</p>
-    <img src="assets/img/sean-dapper.png" class="hero-photo">
+  <div class="page">
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <div class="logo-mark">Y</div>
+          <span>YourWay Real Estate Coaching</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#tracks">Coaching</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="btn-nav">Book a Call</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Real Estate · Property Management · Investing</div>
+          <h1>Get out of chaos mode.<br />Build a business that actually works.</h1>
+          <p class="hero-subtitle">
+            Coaching for property managers, investors, and agents who are tired of theory and want
+            real systems that work in the real world.
+          </p>
+
+          <div class="hero-pill">
+            <span>✓</span>
+            One-on-one coaching from an active operator, not a “guru.”
+          </div>
+
+          <div class="hero-cta-row">
+            <button class="btn-primary" onclick="scrollToId('contact')">
+              Book a Free Intro Call
+              <span>→</span>
+            </button>
+            <button class="btn-ghost" onclick="scrollToId('tracks')">
+              View Coaching Options
+            </button>
+          </div>
+
+          <p class="hero-footnote">
+            Based in Rochester, NY · Working with clients across the U.S.
+          </p>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-photo">
+            <!-- Replace with your actual image path -->
+            <!-- Example if you upload sean-dapper.png next to this file: -->
+            <!-- <img src="sean-dapper.png" alt="Sean - YourWay Coaching" /> -->
+            <span>Your photo / brand image can go here (e.g. sean-dapper.png).</span>
+          </div>
+
+          <div class="hero-tagline">“Real talk. Real systems. No fluff.”</div>
+          <div class="hero-mini">
+            Hands-on guidance from someone who actually runs property management, investing, and
+            real estate deals day to day.
+          </div>
+
+          <div class="hero-metrics">
+            <div>
+              <div class="metric-label">Doors managed / overseen</div>
+              <div class="metric-value">100+ over career</div>
+            </div>
+            <div>
+              <div class="metric-label">Experience</div>
+              <div class="metric-value">20+ years in real estate</div>
+            </div>
+            <div>
+              <div class="metric-label">Focus</div>
+              <div class="metric-value">Systems & clarity</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COACHING TRACKS -->
+      <section id="tracks">
+        <div class="section-label">Coaching Tracks</div>
+        <h2 class="section-title">Choose the lane that fits where you are right now.</h2>
+        <p class="section-subtitle">
+          Whether you’re running a small property management company, stacking your first rentals,
+          or trying to turn your license into an actual business, we build a plan that fits your
+          reality.
+        </p>
+
+        <div class="tracks-grid">
+          <!-- Track 1: Property Management -->
+          <article class="track-card">
+            <div class="track-pill">Property Management</div>
+            <h3 class="track-name">Property Management Coaching</h3>
+            <p class="track-tagline">
+              For owners & operators who want systems, better owners, and less chaos.
+            </p>
+            <ul class="track-list">
+              <li>Intake scripts, owner calls & setting expectations</li>
+              <li>Workflows for maintenance, turns & inspections</li>
+              <li>Profit & loss basics for a PM company</li>
+              <li>When to fire an owner or a door</li>
+            </ul>
+            <div class="track-bottom">
+              <div class="price">
+                From <span>$497</span> / month<br />
+                (bi-weekly Zoom calls)
+              </div>
+              <div class="track-cta" onclick="scrollToId('contact')">
+                I need this → 
+              </div>
+            </div>
+          </article>
+
+          <!-- Track 2: Investors -->
+          <article class="track-card">
+            <div class="track-pill">Investors</div>
+            <h3 class="track-name">Real Estate Investing Coaching</h3>
+            <p class="track-tagline">
+              For investors who want deals that actually pencil, not just “Door #47” clout.
+            </p>
+            <ul class="track-list">
+              <li>Finding & screening deals (off market + MLS)</li>
+              <li>Basic underwriting that doesn’t lie to you</li>
+              <li>Team building: agents, lenders, PM & contractors</li>
+              <li>Exit strategy thinking from day one</li>
+            </ul>
+            <div class="track-bottom">
+              <div class="price">
+                From <span>$447</span> / month<br />
+                (bi-weekly Zoom calls)
+              </div>
+              <div class="track-cta" onclick="scrollToId('contact')">
+                Help me buy smarter →
+              </div>
+            </div>
+          </article>
+
+          <!-- Track 3: Agents -->
+          <article class="track-card">
+            <div class="track-pill">Agents</div>
+            <h3 class="track-name">Real Estate Agent Coaching</h3>
+            <p class="track-tagline">
+              For agents who want a real book of business, not just another script to shout.
+            </p>
+            <ul class="track-list">
+              <li>Dialing in your niche & simple marketing</li>
+              <li>Lead handling: from random DM to signed client</li>
+              <li>Working with investors & PM companies</li>
+              <li>Building a repeat & referral engine</li>
+            </ul>
+            <div class="track-bottom">
+              <div class="price">
+                From <span>$397</span> / month<br />
+                (bi-weekly Zoom calls)
+              </div>
+              <div class="track-cta" onclick="scrollToId('contact')">
+                Let’s build a pipeline →
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="section-label">About The Coaching</div>
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title">Real-world coaching from someone who actually runs this stuff.</h2>
+            <p class="section-subtitle">
+              No rented Lambos. No “seven-figure in 90 days” nonsense. Just honest, blunt coaching
+              from the trenches.
+            </p>
+
+            <div class="pill-row">
+              <div class="pill">Property Management</div>
+              <div class="pill">Mid-term & Long-term Rentals</div>
+              <div class="pill">Small Multifamily</div>
+              <div class="pill">Real Estate Sales</div>
+            </div>
+
+            <div class="about-body">
+              <p>
+                We focus on clarity first: where you are, what’s broken, and what “good” actually
+                looks like for you in the next 12 months. Then we reverse engineer the systems,
+                scripts, and decisions to get you there.
+              </p>
+              <p>
+                Every call ends with a short, clear action list. No fluff. No 47-page “homework”
+                PDFs you never open again. Just the next few moves you actually need to make.
+              </p>
+            </div>
+
+            <div class="badge-row">
+              <div class="badge">Rochester, NY based</div>
+              <div class="badge">1:1 Coaching Only</div>
+              <div class="badge">No locked-in long-term contracts</div>
+            </div>
+          </div>
+
+          <aside class="about-card">
+            <div class="about-quote">
+              “Most people don’t need more motivation. They need someone who actually understands
+              their business model to sit down, look at the mess, and say: ‘Here’s step one. Then
+              step two. Then step three.’ That’s what this coaching is.”
+            </div>
+            <div>
+              <div class="about-name">YourWay Coaching</div>
+              <div class="about-meta">Real estate, property management & investing</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Questions you’re probably already asking.</h2>
+        <p class="section-subtitle">
+          Short answers, no spin. If something isn’t covered here, drop it in the contact form and
+          we’ll talk about your specific mess.
+        </p>
+
+        <div class="faq-grid">
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>How do the coaching calls work?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-a">
+              We meet on Zoom, typically every other week. Sessions run about 45–60 minutes. You
+              bring what’s on fire plus any numbers, screenshots, or documents you want reviewed.
+              We prioritize, troubleshoot, and leave you with a short list of concrete next steps.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Is there a contract or can I cancel?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-a">
+              No long-term lock-in. Coaching is month-to-month. If you’re doing the work and not
+              getting value, we end it like adults and move on.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Do you only work with people in Rochester?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-a">
+              No. Rochester is home base, but coaching is available anywhere as long as you can
+              meet online and provide the info we need (rent rolls, P&amp;L, deals, etc.).
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Will you look at my deals or my actual PM company?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-a">
+              Yes. That’s kind of the point. We can review your deals, systems, lease language,
+              owner mix, or whatever is actually causing you pain right now and work through it
+              together.
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-q">
+              <span>Is this tax deductible?</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-a">
+              In many cases, professional coaching and education for your business can be treated
+              as an expense. Talk with your tax professional for your specific situation. This is
+              not tax advice, etc., you know the drill.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-label">Next Step</div>
+        <h2 class="section-title">Book a quick intro call.</h2>
+        <p class="section-subtitle">
+          Tell me what you’re trying to build, where you’re stuck, and I’ll tell you if this is a
+          fit. If it’s not, I’ll say that too.
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <!-- Replace ACTION with your actual form handler (or use a service like Tally, Typeform, etc.) -->
+            <form action="#" method="post">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="track">Which lane fits you best?</label>
+                <select id="track" name="track">
+                  <option value="">Select one</option>
+                  <option value="pm">Property Management Coaching</option>
+                  <option value="investor">Real Estate Investing Coaching</option>
+                  <option value="agent">Real Estate Agent Coaching</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="message">What’s going on in your business right now?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Give me the unfiltered version. What are you dealing with, and what would 'better' look like in the next 6–12 months?"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">
+                Submit &amp; Request a Call
+              </button>
+
+              <p class="contact-note">
+                You’re not committing to anything by filling this out. This just starts a
+                conversation so we can see if it makes sense to work together.
+              </p>
+            </form>
+          </div>
+
+          <aside class="contact-side">
+            <p>
+              Prefer email or DM? You can also reach out directly and skip the form if you already
+              know what you need.
+            </p>
+
+            <ul class="contact-list">
+              <li><span>Email</span> info@rochesterpropertymanagementexperts.com</li>
+              <li><span>Website</span> rochesterpropertymanagementexperts.com/coaching</li>
+              <li><span>Base</span> Rochester, New York</li>
+            </ul>
+
+            <p style="margin-top: 0.9rem;">
+              Expect blunt feedback, simple action steps, and someone who actually respects your
+              time. No “motivation monologue” at the start of every call.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> YourWay Real Estate Coaching. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#tracks">Coaching</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
   </div>
-</header>
-<script src="assets/js/main.js"></script>
+
+  <script>
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function toggleFaq(item) {
+      item.classList.toggle("open");
+    }
+
+    // Set year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
