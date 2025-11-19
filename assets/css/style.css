@@ -1,0 +1,4 @@
+
+body { background:#0b1120; color:white; font-family:Arial; margin:0; }
+.hero { padding:60px; text-align:center; background:linear-gradient(135deg,#f97316,#f59e0b); }
+.hero-photo { width:180px; height:180px; border-radius:50%; margin-top:20px; }
